@@ -3,12 +3,8 @@
 @import "tailwindcss";
 
 *{
-  font-family: futura;
+  font-family: Teachers;
 }
 p{
   font-family: Teachers;
-}
-
-body{
-  background-color: black;
 }

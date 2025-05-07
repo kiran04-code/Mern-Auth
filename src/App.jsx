@@ -1,18 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-
-import Navbar from './components/navbar'
-import Content from './components/content'
+import { BrowserRouter , Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Signin from './pages/signin'
+import Signup from './pages/Signup'
+import Profile from './pages/profile'
 function App() {
 
-
   return (
-    <div className="bg-zinc-200 text-zinc-900 text-2xl ">
-      <Navbar/>
-       <div className='w-screen h-screen flex items-center justify-center '>
-         <Content/>
-       </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/signin' element={<Signin/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/Profile' element={<Profile/>}/>
+      </Routes>
+    </BrowserRouter>
        
   )
 }
