@@ -1,0 +1,14 @@
+
+
+@import "tailwindcss";
+
+*{
+  font-family: futura;
+}
+p{
+  font-family: Teachers;
+}
+
+body{
+  background-color: black;
+}
