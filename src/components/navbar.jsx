@@ -6,7 +6,7 @@ const Navbar = () => {
             <h1 className="text-xl font-bold">AppAuth</h1>
             <div className="ml-auto flex gap-4">
                 <a href="#" className="hover:text-zinc-300"> <p>Home</p> </a>
-                <a href="#" className="hover:text-zinc-300"><p>About</p></a>
+                <a href="/About" className="hover:text-zinc-300"><p>About</p></a>
                 <a href="#" className="hover:text-zinc-300"><p>Contact</p></a>
             </div>
         </div>
