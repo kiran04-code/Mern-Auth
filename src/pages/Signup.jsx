@@ -1,8 +1,10 @@
 import React from "react";
-
+import Navbar from '../components/navbar';
 const Signup = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-gray-100">
+   <div>
+    <Navbar/>
+     <div className="w-full min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Sign Up</h2>
         <form className="space-y-4">
@@ -45,6 +47,7 @@ const Signup = () => {
         </p>
       </div>
     </div>
+   </div>
   );
 };
 
