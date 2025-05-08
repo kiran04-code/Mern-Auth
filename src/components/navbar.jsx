@@ -7,8 +7,8 @@ const Navbar = () => {
             <div className="ml-auto flex gap-4">
                 <a href="/" className="hover:text-zinc-300"> <p>Home</p> </a>
                 <a href="/About" className="hover:text-zinc-300"><p>About</p></a>
-                <a href="/Signin" className="hover:text-zinc-300"><p>Signup</p></a>
-                <a href="/Signup" className="hover:text-zinc-300"> <p>Signin</p> </a>
+                <a href="/Signin" className="hover:text-zinc-300"><p>Signin</p></a>
+                <a href="/Signup" className="hover:text-zinc-300"> <p>Signup</p> </a>
 
             </div>
         </div>
