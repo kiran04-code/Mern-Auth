@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import Navbar from '../components/navbar';
+import OAuth from '../components/Oauth'
 import { useNavigate } from "react-router-dom";
 const Signup = () => {
   const navigate = useNavigate()
@@ -80,6 +81,7 @@ const Signup = () => {
            }
           </button>
         </form>
+        <OAuth/>
         <p className="text-sm text-center mt-4 text-gray-600">
           Already have an account?{" "}
           <a href="/signin" className="text-blue-600 hover:underline">

@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import Navbar from "../components/navbar";
+import OAuth from '../components/Oauth'
 import { useNavigate } from "react-router-dom";
 import { SignInStart,SignInSucess,SignInfail } from "../redux/createSlice/slice";
 import {useDispatch ,useSelector} from "react-redux"
@@ -69,21 +70,8 @@ const Signin = () => {
            }
        </button>
      </form>
-
-     <div className="my-4 flex items-center justify-center">
-       <span className="text-gray-500 text-sm">or</span>
-     </div>
-
-     <button
-       className="w-full flex items-center justify-center gap-2 border py-2 rounded-md hover:bg-gray-100 transition duration-200"
-     >
-       <img
-         src="https://www.svgrepo.com/show/475656/google-color.svg"
-         alt="Google"
-         className="w-5 h-5"
-       />
-       <span className="text-sm text-gray-700">Login with Google</span>
-     </button>
+     <OAuth/>
+     
 
      <p className="text-sm text-center mt-4 text-gray-600">
        Don't have an account?{" "}
