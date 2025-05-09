@@ -1,6 +1,6 @@
 import { useSelector,useDispatch } from "react-redux";
 import { useState } from "react";
-import { updatestart,updatesuces,updatefail } from "../redux/createSlice/slice";
+import { updatestart,updatesuces,updatefail,deletestart,deletesuces,deletefail } from "../redux/createSlice/slice";
 
 const Profile = () => {
   const dispatch = useDispatch()
@@ -35,7 +35,20 @@ console.log(formData)
   }
    
   };
-
+  const hadleuserdelete = async()=>{
+  try {
+    dispatch(deletefail())
+      const res = fetch(`/api/delete/${currentUser._id}`,{
+      method:"DELETE",
+      
+    })
+    const data = await res.json()
+   dispatch(deletesuces(data))
+  } catch (error) {
+    next(error)
+    dispatch(deletefail())
+  }
+  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
@@ -100,9 +113,11 @@ console.log(formData)
             </button>
 
             <button
+            onClick={hadleuserdelete}
               type="button"
               className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700"
             >
+              
               Delete Account
             </button>
             
